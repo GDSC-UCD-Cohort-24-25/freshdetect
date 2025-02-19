@@ -1,32 +1,14 @@
 import React, { useState, useEffect }from 'react';
-
+import ImgIn from './components/ImgIn';
 
 function App() {
 
-    const [data, setData] = useState([{}]);
-
-    useEffect(() => {
-        fetch("/members").then(
-        res => res.json()
-        ).then(
-        data => {
-            setData(data)
-            console.log(data)
-        })
-    }, [])
-
-
     return (
     <>
-        <div className="">
-            {(typeof data.members === 'undefined') ? (
-                <p>Loading...</p>
-            ) : (
-                data.members.map((member, i) => (
-                    <p key = {i}>{member}</p>
-                ))
-            )}
+        <div className = "AppContainer">
+        <ImgIn/>
         </div>
+        
     </>
     );
 }
