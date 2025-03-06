@@ -1,59 +1,89 @@
-import React, { useState, useEffect }from 'react';
-import ImgIn from './components/ImgIn';
+// import React, { useState, useEffect } from 'react';
+// // import ImgIn from './components/ImgIn';
 
-function ResultCard(){
-    const location = useLocation();
-    const{ image, result } = location.state || {};
-    const navigate = useNavigate();
-    const handleNav = () =>{
-        navigate('/ImageIn');
-    }
+// function Result(){
+//     // const location = useLocation();
+//     // const{ image, result } = location.state || {};
+//     // const navigate = useNavigate();
+//     // const handleNav = () =>{
+//     //     navigate("/");
+//     // }
+//     const location = useLocation();
+//     const navigate = useNavigate();
+//     const image = location.state?.image;
 
-    return(
-    <>
-    <div className = "ResultCard" style={{position: "relative", height: "100vh"}}>
-        <div className = "image" style={{ position: 'absolute', top: '0', left: '0', width: '100%', height: '100%', zIndex: 1 }}>
-            <img src = {image} alt = "Uploaded" style = {{ width: "100%", height: "60%", objectFit: 'cover'}} />
+
+//     return(
+//     <>
+//     <h2>result</h2>
+//     <div className = "resultCard"
+//         style = {{
+//             backgroundColor: "gray"
+//         }}
+//     >
+//         pop
+//     </div>
+//     {image ? (
+//         <img src={image} alt="Uploaded" style={{ width: "300px", height: "300px", objectFit: "cover" }} />
+//       ) : (
+//         <p>No image uploaded.</p>
+//       )}
+
+//     </> e
+//     );
+// }
+
+// export default Result;
+
+import { useLocation, useNavigate } from "react-router-dom";
+
+function Result() {
+  const location = useLocation();
+  const navigate = useNavigate();
+  const image = location.state?.image;
+
+  return (
+    <div 
+        className="resultComponent"
+        style={{
+            textAlign: "center",
+            backgroundColor: ""
+        }}
+    >
+        <h2>TEST RESULT</h2>
+        <div className="imageCard">
+            {image ? (
+                <img src={image} alt="Uploaded" style={{ width: "300px", height: "300px", objectFit: "cover" }} />
+            ) : (
+                <p>No image uploaded.</p>
+            )}
         </div>
-        <div
-            className = "result"
-            style = {{
-                position: "absolute",
-                bottom: "0",
-                left: "0",
-                width: "100%",
-                height: "50%",
-                borderRadius: "40px 40px 0px 0px",
-                backgroundcolor: "white",
-                zIndex: 2,
-                display: "flex",
-                justifyContent: 'center',
-                alignItems: 'center',
+        <div className="resultCard"
+            style={{
+                textAlign: "center"
             }}
         >
-            <div className = "result-body" style = {{ padding: "10px", textAlign: "center",}}>
-                <p style = {{fontSize: "20px", marginBottom: "5px", color: rgba(0, 0, 0, 0.70)}}>result</p>
-                <p className="result-sentense" style = {{ fontsize: "48px", color: "black", marginBottom: "5px" }}>
-                    {result}
-                </p>
-                <button 
-                    onClick =  {handleNav}
-                    style={{
-                        padding: "12px 24px",
-                        color: "black",
-                        backgroundColor: "#D9D9D9",
-                        boarderRadius: "50px",
-                        fontSize: "18px",
+            <p>result</p>
+            <p><b>TEST_RESULT_HERE</b></p>
 
-                    }}
-                >
-                    back
-                </button>
-            </div>
         </div>
+
+      
+        <button 
+            onClick={() => navigate("/")}
+            style={{
+                width:"80px",
+                height:"80px",
+                backgroundColor:"#D9D9D9",
+                border:"none",
+                borderRadius: "50px"
+                
+            }}
+        >
+            Go Back
+        </button>
     </div>
-    </>
-    );
+  );
 }
 
-export default ResultCard;
+export default Result;
