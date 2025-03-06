@@ -1,4 +1,5 @@
 import React, { useState, useEffect }from 'react';
+import { useNavigate } from 'react-router-dom';
 
 function ImgIn() {
     const [file, setFile] = useState();
@@ -7,12 +8,20 @@ function ImgIn() {
         setFile(URL.createObjectURL(e.target.files[0]));
     }
 
+    const navigate = useNavigate();
+    const handleNavigate = () => {
+        navigate('/next', { state: { image: file } });
+    }
+
     return (
     <>
     <div className = "imgUploadComponent">
         <h2>Add Image:</h2>
         <input type="file" onChange={handleChange} />
-        <img src={file} />
+
+        {file && <img src={file} alt="Uploaded" />}
+
+        <button onClick={handleNavigate}>check</button>
     </div>
     </>
     );
