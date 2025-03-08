@@ -1,0 +1,94 @@
+/* ImgIn.css */
+
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  body {
+    background-color: #f8f8f8;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  /* Container Styles */
+  .app-container {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    text-align: center;
+    max-width: 600px;
+    width: 100%;
+  }
+  
+  /* Title Styles */
+  .title {
+    font-size: 2rem;
+    color: #4A90E2;
+    margin-bottom: 20px;
+  }
+  
+  /* Form Styles */
+  .upload-form {
+    margin-bottom: 20px;
+  }
+  
+  /* File Input Styles */
+  .file-input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    margin-bottom: 15px;
+    font-size: 1rem;
+  }
+  
+  .file-input:focus {
+    outline: none;
+    border-color: #4A90E2;
+  }
+  
+  /* Button Styles */
+  .submit-btn {
+    background-color: #4A90E2;
+    color: #ffffff;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .submit-btn:hover {
+    background-color: #357ABD;
+  }
+  
+  /* Image Preview Styles */
+  .image-preview {
+    margin-top: 20px;
+  }
+  
+  .uploaded-image {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Result Styles */
+  .result {
+    font-size: 1.5rem;
+    color: #4A90E2;
+    margin-top: 20px;
+    font-weight: bold;
+  }
+  
