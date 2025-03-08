@@ -1,26 +1,10 @@
 import React, { useState, useEffect }from 'react';
 import { useNavigate } from 'react-router-dom';
-
-// function ImgIn() {
-
-
-
-// }
+import { AiFillPicture } from "react-icons/ai";
 
 function ImgIn() {
   const [file, setFile] = useState();
   const navigate = useNavigate();
-
-//   const handleChange = (e) => {
-//     const selectedFile = e.target.files[0];
-//     if (selectedFile) {
-//       const reader = new FileReader();
-//       reader.onloadend = () => {
-//         setFile(reader.result);
-//       };
-//       reader.readAsDataURL(selectedFile);
-//     }
-//   };
 
 function handleChange(e) {
     console.log(e.target.files);
@@ -34,11 +18,83 @@ function handleChange(e) {
   };
 
   return (
-    <div className="imgUploadComponent">
-      <h2>Add Image:</h2>
-      <input type="file" onChange={handleChange} />
-      {file && <img src={file} alt="Uploaded" style={{ width: "200px", height: "200px", objectFit: "cover" }} />}
-      <button onClick={handleNav} disabled={!file}>Check</button>
+    <div className="imgUploadComponent"
+      style={{
+        textAlign: "center",
+        flexDirection: "column",
+        alignItems: "center",
+        marginTop: "20px",
+        backgroundColor: "#FAF9F6",
+        padding: "60px",
+        borderRadius: "15px",
+        display: "flex",
+        boxShadow: "40px 40px 600px rgba(0, 0, 0, 0.8)"
+
+      }}
+    >
+
+      <div style={{ position: "relative", textAlign: "center" }}>
+        <input
+          type="file"
+          id="fileInput"
+          onChange={handleChange}
+          style={{ display: "none" }}
+        />
+
+        <label
+          htmlFor="fileInput"
+          style={{
+            display: "inline-block",
+            backgroundColor: "#D9D9D9",
+            color: "black",
+            borderRadius: "5px",
+            cursor: "pointer",
+            transition: "background-color 0.3s",
+            position: "relative",
+            width: "420px",
+            height: "420px",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center"
+          }}
+        >
+            {!file && <AiFillPicture size="40" />}
+            {file && <img src={file} alt="Uploaded" style={{
+              position: "absolute",
+              width: "100%",
+              height: "100%",
+              objectFit: "cover",
+              borderRadius: "5px"
+            }} />}
+        </label>
+      </div>
+
+      <p style={{ fontSize: "28px", fontWeight: "bold" }}>Add Image</p>
+
+      <button 
+        onClick={handleNav} 
+        disabled={!file}
+        style = {{
+          width: "80px",
+          height: "80px",
+          border: "none",
+          borderRadius: "50%",
+          backgroundColor: "#D9D9D9",
+          color: "black",
+          fontSize: "18px",
+          marginTop: "60px", 
+          marginBottom: "20px",
+          fontWeight: "bold",
+        }}
+        onMouseEnter={(e) => {
+          if (file) e.target.style.backgroundColor = "#BFBFBF"; // ホバー時の色
+        }}
+        onMouseLeave={(e) => {
+          if (file) e.target.style.backgroundColor = "#D9D9D9"; // 元の色に戻す
+        }}
+      >
+        Check
+      </button>
     </div>
   );
 }

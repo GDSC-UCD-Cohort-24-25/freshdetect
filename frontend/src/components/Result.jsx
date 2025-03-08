@@ -1,41 +1,7 @@
-// import React, { useState, useEffect } from 'react';
-// // import ImgIn from './components/ImgIn';
-
-// function Result(){
-//     // const location = useLocation();
-//     // const{ image, result } = location.state || {};
-//     // const navigate = useNavigate();
-//     // const handleNav = () =>{
-//     //     navigate("/");
-//     // }
-//     const location = useLocation();
-//     const navigate = useNavigate();
-//     const image = location.state?.image;
-
-
-//     return(
-//     <>
-//     <h2>result</h2>
-//     <div className = "resultCard"
-//         style = {{
-//             backgroundColor: "gray"
-//         }}
-//     >
-//         pop
-//     </div>
-//     {image ? (
-//         <img src={image} alt="Uploaded" style={{ width: "300px", height: "300px", objectFit: "cover" }} />
-//       ) : (
-//         <p>No image uploaded.</p>
-//       )}
-
-//     </> e
-//     );
-// }
-
-// export default Result;
+// 
 
 import { useLocation, useNavigate } from "react-router-dom";
+import { FaCamera } from "react-icons/fa";
 
 function Result() {
   const location = useLocation();
@@ -47,41 +13,80 @@ function Result() {
         className="resultComponent"
         style={{
             textAlign: "center",
-            backgroundColor: ""
+            flexDirection: "column",
+            alignItems: "center",
+            marginTop: "20px",
+            backgroundColor: "#FAF9F6",
+            padding: "60px",
+            borderRadius: "15px",
+            display: "flex",
+            boxShadow: "40px 40px 600px rgba(0, 0, 0, 0.8)" 
         }}
     >
-        <h2>TEST RESULT</h2>
-        <div className="imageCard">
+
+        <div className="imageCard"
+            style={{
+                width: "420px", 
+                height: "420px",
+                backgroundColor: "white",
+                display: "flex",
+                overflow: "hidden",
+                justifyContent: "center",
+                alignItems: "center",
+                borderRadius: "5px",
+                marginBottom: "20px",
+            }}
+        >
             {image ? (
-                <img src={image} alt="Uploaded" style={{ width: "300px", height: "300px", objectFit: "cover" }} />
+                <img src={image} alt="Uploaded" style={{ width: "100%", height: "100%", objectFit: "cover" }} />
             ) : (
                 <p>No image uploaded.</p>
             )}
         </div>
+
         <div className="resultCard"
             style={{
-                textAlign: "center"
+                width: "80%",
+                maxWidth: "600px",
+                textAlign: "center",               
+                padding: "20px",
+                borderRadius: "25px",
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center",
+                boxShadow: "0px 10px 80px rgba(0, 0, 0, 0.2)"
             }}
         >
-            <p>result</p>
-            <p><b>TEST_RESULT_HERE</b></p>
+            <p style={{ fontSize: "18px", fontWeight: "bold" }}>Result</p>
+            <p style={{
+                    fontSize: "30px",
+                    fontWeight: "bold",
+                    marginTop: "20px",
+                    marginBottom: "20px",
+                }}
+            >
+                TEST_RESULT_HERE
+            </p>
+
+            <button 
+                onClick={() => navigate("/")}
+                style={{
+                    width: "80px",
+                    height: "80px",
+                    backgroundColor: "#D9D9D9",
+                    border: "none",
+                    borderRadius: "50%",
+                    marginTop: "20px",
+                    marginBottom: "10px",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                }}
+            >
+                <FaCamera size="40" />
+            </button>
 
         </div>
-
-      
-        <button 
-            onClick={() => navigate("/")}
-            style={{
-                width:"80px",
-                height:"80px",
-                backgroundColor:"#D9D9D9",
-                border:"none",
-                borderRadius: "50px"
-                
-            }}
-        >
-            Go Back
-        </button>
     </div>
   );
 }
