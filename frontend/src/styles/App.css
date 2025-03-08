@@ -1,0 +1,47 @@
+#root {
+    text-align: center;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    padding: 20px;
+    overflow: hidden;
+    width: 100%;
+    
+  }
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+body {
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-image: url('/background (3).jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+h1, h2, h3, h4, h5, h6, p, button, input, label {
+  font-family: 'Inter', sans-serif;
+}
+
+.header {
+  color: #C60C30;
+  padding-top: 10px;
+  text-align: left;
+  font-size: 20px;
+  width: 100%;
+  display: flex;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  
+}
+
+.icon {
+  font-size: 80px;
+  color: #C60C30;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  margin-left: 10px;
+}
