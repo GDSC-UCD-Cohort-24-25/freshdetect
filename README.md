@@ -1,6 +1,4 @@
-# Project Repository
-
-This repository contains a web application with separate frontend and backend components.
+# FreshDetect
 
 ## Getting Started
 
@@ -10,21 +8,20 @@ Follow these instructions to get the project up and running on your local machin
 
 - Git
 - Python 3.x
-- Node.js and npm
 - Virtual environment tool (venv)
 
 ### Installation
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/username/project-name.git
-   cd project-name
+   git clone https://github.com/GDSC-UCD-Cohort-24-25/freshdetect.git
+   cd freshDetect
    ```
 
 2. Set up the Python virtual environment:
    ```bash
    python3 -m venv venv
-   source venv/bin/activate  # On Windows, use: venv\Scripts\activate
+   source venv/bin/activate
    ```
 
 3. Install Python dependencies:
@@ -73,6 +70,7 @@ The frontend development server should now be running. Open your browser and nav
 ```
 project-name/
 ├── backend/         # Python backend server
+│   └── models       # folder containing model
 │   └── server.py    # Main server file
 ├── frontend/        # Frontend application
 ├── requirements.txt # Python dependencies
