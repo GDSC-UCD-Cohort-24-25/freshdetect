@@ -1,5 +1,7 @@
 flask
-torch
-torchvision
-pillow
-flask-cors
+flask-cors==4.0.0
+numpy>=1.21.0
+tensorflow>=2.17.0
+pillow>=10.0.0
+gunicorn>=21.0.0
+matplotlib
