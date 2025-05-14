@@ -1,0 +1,7 @@
+:root {
+    --accent-color: #E43C14;
+}
+
+.accent {
+    color: var(--accent-color);
+}

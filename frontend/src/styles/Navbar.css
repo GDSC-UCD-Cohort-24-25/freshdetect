@@ -1,0 +1,22 @@
+.navbar {
+    transition: background-color 0.3s ease;
+    z-index: 1030 !important;
+}
+
+.navber-items {
+    font-size: 1.2em;
+    font-weight: 400;
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+  }
+  
+
+.accent {
+    color: var(--accent-color);
+}
+
+.navbar-brand {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
