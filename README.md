@@ -29,6 +29,13 @@ Follow these instructions to get the project up and running on your local machin
    pip install -r requirements.txt
    ```
 
+4. Install Frontend dependencies:
+   ```bash
+   npm install bootstrap
+   npm install vanva
+   npm install react-icons
+   ```
+
 ### Running the Application
 
 #### Backend
