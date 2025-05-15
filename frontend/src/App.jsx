@@ -1,15 +1,33 @@
-import React, { useState, useEffect } from 'react';
-import ImgIn from './components/ImgIn';
+import React, { useState, useEffect } from 'react'
+import './styles/App.css'
+import 'bootstrap/dist/css/bootstrap.min.css'
+import ImgIn from './components/ImgIn'
+import Navbar from './components/Navbar';
+import Vanta from './components/vanta';
+import Loading from './components/Loading';
+import Footer from './components/Footer';
 
 function App() {
+    const [loading, setLoading] = useState(true);
+
+    useEffect(() => {
+        const timer = setTimeout(() => setLoading(false), 1000)
+        return () => clearTimeout(timer);
+    }, [])
+
+    if(loading){
+        return <Loading />;
+    }
 
     return (
-    <>
-        <div className = "AppContainer">
-        <ImgIn/>
-        </div>
-        
-    </>
+        <>
+        <Vanta />
+        <Navbar />
+            <div className="main-content">
+            <ImgIn />
+            </div>
+        <Footer />   
+        </>
     );
 }
 

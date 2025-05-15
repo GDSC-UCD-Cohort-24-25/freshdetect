@@ -1,0 +1,12 @@
+:root {
+    --accent-color: #E43C14;
+}
+
+* {
+    font-family: "Sriracha", cursive;
+    font-style: normal;
+}
+
+.accent {
+    color: var(--accent-color);
+}
