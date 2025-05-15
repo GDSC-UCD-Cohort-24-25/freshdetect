@@ -25,7 +25,7 @@ const Vanta = () => {
             minWidth: 200.00,
             scale: 1.00,
             scaleMobile: 1.00,
-            color: 0x141014,
+            color: 0x128058,
             shininess: 21.00,
             waveHeight: 16.00,
             waveSpeed: 0.40,

@@ -1,94 +1,121 @@
-/* ImgIn.css */
-
-/* Global Styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Arial', sans-serif;
+/* From Uiverse.io by adamgiebl */ 
+.btn {
+    font-family: inherit;
+    font-size: 20px;
+    background: var(--accent-color);
+    color: white;
+    padding: 0.7em 1em;
+    padding-left: 0.9em;
+    display: flex;
+    align-items: center;
+    border: none;
+    border-radius: 12px !important;
+    overflow: hidden;
+    transition: all 0.2s;
+    cursor: pointer;
+    margin: auto;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   }
   
-  body {
-    background-color: #f8f8f8;
-    color: #333;
+  .btn span {
+    display: block;
+    margin-left: 0.3em;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .btn svg {
+    display: block;
+    transform-origin: center center;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .btn:hover .svg-wrapper {
+    animation: fly-1 0.6s ease-in-out infinite alternate;
+  }
+  
+  .btn:hover svg {
+    transform: translateX(1.2em) rotate(45deg) scale(1.1);
+  }
+  
+  .btn:hover span {
+    transform: translateX(5em);
+  }
+  
+  .btn:active {
+    transform: scale(0.95);
+  }
+  
+  @keyframes fly-1 {
+    from {
+      transform: translateY(0.1em);
+    }
+  
+    to {
+      transform: translateY(-0.1em);
+    }
+  }
+
+.image-wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-  }
-  
-  /* Container Styles */
-  .app-container {
-    background-color: #ffffff;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    padding: 30px;
-    text-align: center;
-    max-width: 600px;
-    width: 100%;
-  }
-  
-  /* Title Styles */
-  .title {
-    font-size: 2rem;
-    color: #4A90E2;
-    margin-bottom: 20px;
-  }
-  
-  /* Form Styles */
-  .upload-form {
-    margin-bottom: 20px;
-  }
-  
-  /* File Input Styles */
-  .file-input {
-    width: 100%;
-    padding: 10px;
-    border-radius: 5px;
-    border: 1px solid #ddd;
-    margin-bottom: 15px;
-    font-size: 1rem;
-  }
-  
-  .file-input:focus {
-    outline: none;
-    border-color: #4A90E2;
-  }
-  
-  /* Button Styles */
-  .submit-btn {
-    background-color: #4A90E2;
-    color: #ffffff;
-    padding: 12px 25px;
-    border: none;
-    border-radius: 5px;
-    font-size: 1.1rem;
     cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .submit-btn:hover {
-    background-color: #357ABD;
-  }
-  
-  /* Image Preview Styles */
-  .image-preview {
-    margin-top: 20px;
-  }
-  
-  .uploaded-image {
-    width: 100%;
-    max-width: 300px;
-    height: auto;
+    max-height: 40vh;
     border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    min-width: 20vw;
+    min-height: 20vh;
+    background-color: #f8f8f8;
+    text-align: center;
+    max-width: 100%;
+    max-height: 60vh;
+    overflow: hidden;
   }
+
+.image-wrapper:hover {
+  background-color: #d3d3d3;
+  transition: all 0.1s ease-in-out;
+}
   
-  /* Result Styles */
-  .result {
-    font-size: 1.5rem;
-    color: #4A90E2;
-    margin-top: 20px;
-    font-weight: bold;
-  }
+.image-wrapper-container {  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.image-preview {
+  padding: 12px;
+  background-color: #fff;
+  border-radius: 8px;
+}
   
+.uploaded-image {
+  max-width: 100%;
+  max-height: 50vh;
+  height: auto;
+  width: auto;
+  display: block;
+  margin: 0 auto;
+  object-fit: contain;
+  border-radius: 6px;
+}
+
+.image-label {
+  font-size: 1rem;
+  color: #555;
+}
+
+.camera-icon {
+  font-size: 48px;
+  color: #666;
+}
+
+.text {
+  color: aliceblue;
+}
+
+.result {
+  padding: 20px;
+  background-color: #fff;
+  color: #555;
+}

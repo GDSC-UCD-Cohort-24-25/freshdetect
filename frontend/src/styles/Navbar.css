@@ -13,10 +13,11 @@
   }
   
 
-.accent {
-    color: var(--accent-color);
-}
-
 .navbar-brand {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    color: aliceblue;
+}
+
+.nav-link {
+    color: aliceblue;
 }
