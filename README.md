@@ -32,7 +32,7 @@ Follow these instructions to get the project up and running on your local machin
 4. Install Frontend dependencies:
    ```bash
    npm install bootstrap
-   npm install vanva
+   npm install vanta
    npm install react-icons
    ```
 
