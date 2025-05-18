@@ -3,7 +3,7 @@ import './styles/App.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import ImgIn from './components/ImgIn'
 import Navbar from './components/Navbar';
-import Vanta from './components/vanta';
+import Vanta from './components/Vanta';
 import Loading from './components/Loading';
 import Footer from './components/Footer';
 
